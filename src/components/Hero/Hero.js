@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import Tilt from 'react-parallax-tilt';
 import { toast } from 'react-toastify';
+import { Typewriter } from 'react-simple-typewriter';
 import './Hero.scss';
 
 const Hero = ({ language }) => {
@@ -48,18 +49,23 @@ const Hero = ({ language }) => {
             
             <div className="hero-title">
               <span>{language === 'es' ? 'Soy ' : "I'm "}</span>
-              <Typed
-                strings={
-                  language === 'es'
-                    ? ['Desarrollador Front End', 'Desarrollador React', 'Creativo Digital']
-                    : ['Front End Developer', 'React Developer', 'Digital Creator']
-                }
-                typeSpeed={50}
-                backSpeed={30}
-                backDelay={2000}
-                loop
-                className="typed-text"
-              />
+
+              {/* NUEVA ANIMACIÓN TYPEWRITER */}
+              <span className="typed-text">
+                <Typewriter
+                  words={
+                    language === 'es'
+                      ? ['Desarrollador Front End', 'Desarrollador React', 'Creativo Digital']
+                      : ['Front End Developer', 'React Developer', 'Digital Creator']
+                  }
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={60}
+                  deleteSpeed={40}
+                  delaySpeed={1500}
+                />
+              </span>
             </div>
             
             <p className="hero-description">
