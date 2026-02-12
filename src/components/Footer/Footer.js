@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="footer-text">
             <p>
               © {currentYear} Portfolio. Hecho con{' '}
-              <FaHeart className="heart-icon" /> por Tu Nombre
+              <FaHeart className="heart-icon" /> por Joaquin Orlandau Rosso
             </p>
           </div>
         </div>
