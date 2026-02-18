@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaBriefcase, FaGraduationCap, FaAward } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
 import './Experience.scss';
 
 const Experience = ({ language }) => {

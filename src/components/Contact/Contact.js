@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import emailjs from 'emailjs-com';
 import './Contact.scss';
 
 const Contact = ({ language }) => {
@@ -11,58 +10,6 @@ const Contact = ({ language }) => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    // Aquí deberías configurar tu EmailJS
-    // Para demo, simularemos el envío
-    setTimeout(() => {
-      toast.success('¡Mensaje enviado con éxito! Te responderé pronto.');
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setIsLoading(false);
-    }, 2000);
-
-    // Código real para EmailJS:
-    /*
-    try {
-      await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        formData,
-        'YOUR_USER_ID'
-      );
-      toast.success('¡Mensaje enviado con éxito!');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      toast.error('Error al enviar el mensaje. Intenta de nuevo.');
-    } finally {
-      setIsLoading(false);
-    }
-    */
-  };
 
   const contactInfo = [
     {

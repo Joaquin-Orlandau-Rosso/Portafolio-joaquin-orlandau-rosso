@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 import { 
   SiTypescript, SiNextdotjs,
-  SiTailwindcss, SiVuedotjs, SiAngular
+  SiTailwindcss, SiAngular
 } from 'react-icons/si';
 import './Skills.scss';
 

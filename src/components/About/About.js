@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaCode, FaLaptopCode, FaRocket, FaCoffee, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { FaCode, FaLaptopCode, FaRocket, FaCoffee } from 'react-icons/fa';
 import CountUp from 'react-countup';
-import cvPdf from './CV Joaquin Orlandau Rosso actualizado (Dev - Spa-  202503).pdf';
+import cvPdf from './CV Joaquin Orlandau Rosso Actual.pdf';
 import './About.scss';
 
 const About = ({ language }) => {
@@ -40,30 +40,6 @@ const About = ({ language }) => {
     { icon: <FaLaptopCode />, title: 'Nuevas Tecnologías', description: 'Aprender constantemente' },
     { icon: <FaRocket />, title: 'Innovación', description: 'Crear soluciones creativas' },
     { icon: <FaCoffee />, title: 'Trabajo en Equipo', description: 'Colaboración efectiva' },
-  ];
-
-  const timeline = [
-    {
-      year: '2024',
-      icon: <FaBriefcase />,
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Company',
-      description: 'Liderando proyectos de desarrollo web y móvil.',
-    },
-    {
-      year: '2022',
-      icon: <FaBriefcase />,
-      title: 'Full Stack Developer',
-      company: 'Digital Agency',
-      description: 'Desarrollo de aplicaciones web complejas.',
-    },
-    {
-      year: '2020',
-      icon: <FaGraduationCap />,
-      title: 'Ingeniería en Sistemas',
-      company: 'Universidad',
-      description: 'Graduado con honores.',
-    },
   ];
 
   return (
@@ -139,7 +115,7 @@ const About = ({ language }) => {
             </div>
 
             <div className="about-buttons">
-              <a href={cvPdf} download="CV-Joaquin-Orlandau-Rosso.pdf" className="btn btn-primary">
+              <a href={cvPdf} download="CV Joaquin Orlandau Rosso Actual.pdf" className="btn btn-primary">
                 {language === 'es' ? 'Descargar CV' : 'Download CV'}
               </a>
               <a href="#contact" className="btn btn-outline">
