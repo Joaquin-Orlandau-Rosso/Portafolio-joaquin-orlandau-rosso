@@ -11,7 +11,7 @@ import {
 } from 'react-icons/si';
 import './Skills.scss';
 
-const Skills = () => {
+const Skills = ({ language }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -19,7 +19,7 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: language === 'es' ? 'Frontend' : 'Frontend',
       color: '#61dafb',
       skills: [
         { name: 'React', icon: <FaReact />, level: 95 },
@@ -34,7 +34,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Herramientas',
+      title: language === 'es' ? 'Herramientas' : 'Tools',
       color: '#f1502f',
       skills: [
         { name: 'Git', icon: <FaGitAlt />, level: 92 },
@@ -51,9 +51,9 @@ const Skills = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Habilidades</h2>
+          <h2 className="section-title">{language === 'es' ? 'Habilidades' : 'Skills'}</h2>
           <p className="section-subtitle">
-            Tecnologías y herramientas que domino
+            {language === 'es' ? 'Tecnologías y herramientas que domino' : 'Technologies and tools I master'}
           </p>
         </motion.div>
 

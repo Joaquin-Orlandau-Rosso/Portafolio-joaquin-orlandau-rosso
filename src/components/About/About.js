@@ -36,10 +36,26 @@ const About = ({ language }) => {
   ];
 
   const interests = [
-    { icon: <FaCode />, title: 'Clean Code', description: 'Escribir código limpio y mantenible' },
-    { icon: <FaLaptopCode />, title: 'Nuevas Tecnologías', description: 'Aprender constantemente' },
-    { icon: <FaRocket />, title: 'Innovación', description: 'Crear soluciones creativas' },
-    { icon: <FaCoffee />, title: 'Trabajo en Equipo', description: 'Colaboración efectiva' },
+    { 
+      icon: <FaCode />, 
+      title: 'Clean Code', 
+      description: language === 'es' ? 'Escribir código limpio y mantenible' : 'Write clean and maintainable code' 
+    },
+    { 
+      icon: <FaLaptopCode />, 
+      title: language === 'es' ? 'Nuevas Tecnologías' : 'New Technologies', 
+      description: language === 'es' ? 'Aprender constantemente' : 'Constant learning' 
+    },
+    { 
+      icon: <FaRocket />, 
+      title: language === 'es' ? 'Innovación' : 'Innovation', 
+      description: language === 'es' ? 'Crear soluciones creativas' : 'Create creative solutions' 
+    },
+    { 
+      icon: <FaCoffee />, 
+      title: language === 'es' ? 'Trabajo en Equipo' : 'Teamwork', 
+      description: language === 'es' ? 'Colaboración efectiva' : 'Effective collaboration' 
+    },
   ];
 
   return (

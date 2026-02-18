@@ -30,12 +30,12 @@ const Navbar = ({ darkMode, toggleDarkMode, language, toggleLanguage }) => {
   };
 
   const navItems = [
-    { name: 'Inicio', to: 'hero' },
-    { name: 'Sobre Mí', to: 'about' },
-    { name: 'Habilidades', to: 'skills' },
-    { name: 'Experiencia', to: 'experience' },
-    { name: 'Proyectos', to: 'projects' },
-    { name: 'Contacto', to: 'contact' },
+    { name: language === 'es' ? 'Inicio' : 'Home', to: 'hero' },
+    { name: language === 'es' ? 'Sobre Mí' : 'About', to: 'about' },
+    { name: language === 'es' ? 'Habilidades' : 'Skills', to: 'skills' },
+    { name: language === 'es' ? 'Experiencia' : 'Experience', to: 'experience' },
+    { name: language === 'es' ? 'Proyectos' : 'Projects', to: 'projects' },
+    { name: language === 'es' ? 'Contacto' : 'Contact', to: 'contact' },
   ];
 
   return (
