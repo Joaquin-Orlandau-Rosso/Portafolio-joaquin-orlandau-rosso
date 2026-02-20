@@ -45,6 +45,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    align-items: stretch;
 
     .project-card {
       background: white;
@@ -54,6 +55,9 @@
       transition: all 0.3s ease;
       cursor: pointer;
       position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
 
       .dark-mode & {
         background: #1a1f3a;
@@ -84,13 +88,14 @@
 
       .project-image {
         position: relative;
-        height: 250px;
+        height: 220px;
         overflow: hidden;
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: top center;
           transition: transform 0.5s ease;
         }
 
@@ -142,6 +147,9 @@
 
       .project-content {
         padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
 
         h3 {
           font-size: 1.5rem;
@@ -179,6 +187,7 @@
         .project-links {
           display: flex;
           gap: 1rem;
+          margin-top: auto;
 
           a {
             width: 40px;

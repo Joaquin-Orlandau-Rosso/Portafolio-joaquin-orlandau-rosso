@@ -29,6 +29,20 @@ const Projects = ({ language }) => {
       featured: true,
     },
     {
+      id: 3,
+      title: 'Masajes Marsela Rosso',
+      description:
+        language === 'es'
+          ? 'Sitio web para un negocio de masajes y bienestar, optimizado para SEO local y pensado para captar clientes potenciales.'
+          : 'Website for a massage and wellness business, optimized for local SEO and designed to attract potential clients.',
+      image: '/imgs/Marsela-nueva.jpg',
+      category: 'web',
+      technologies: ['React', 'CSS', 'Responsive Design'],
+      github: 'https://github.com/Joaquin-Orlandau-Rosso/Nueva-pagina-marsela',
+      demo: 'https://marselarosso.vercel.app/',
+      featured: false,
+    },
+    {
       id: 2,
       title: 'María AstroCoach',
       description:
@@ -40,20 +54,6 @@ const Projects = ({ language }) => {
       technologies: ['React', 'Styled Components', 'Netlify'],
       github: 'https://github.com/Fuljoq/MariaAstroCoach',
       demo: 'https://mariaastrocoach.netlify.app/',
-      featured: true,
-    },
-    {
-      id: 3,
-      title: 'Masajes Marsela Rosso',
-      description:
-        language === 'es'
-          ? 'Sitio web para un negocio de masajes y bienestar, optimizado para SEO local y pensado para captar clientes potenciales.'
-          : 'Website for a massage and wellness business, optimized for local SEO and designed to attract potential clients.',
-      image: '/imgs/marcelapag.png',
-      category: 'web',
-      technologies: ['React', 'CSS', 'Responsive Design'],
-      github: 'https://github.com/Fuljoq/MasajesMarselarosso',
-      demo: 'https://www.marsselarosso.com/',
       featured: false,
     },
   ];
